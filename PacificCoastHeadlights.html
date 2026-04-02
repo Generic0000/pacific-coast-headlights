@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pacific Coast Headlights - Mobile Headlight Restoration | Orange County, CA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/*
+  =====================================================
+  PHOTO SWAP — Edit these 2 lines to use real photos:
+  Replace the URL inside url('...') with your image URL
+  =====================================================
+*/
+:root {
+  --before-photo: url('https://placehold.co/900x600/7a5a10/ffd080?text=BEFORE+PHOTO');
+  --after-photo:  url('https://placehold.co/900x600/1a3a6a/a0c8ff?text=AFTER+PHOTO');
+  --navy:     #0b1f3a;
+  --dark:     #071525;
+  --blue:     #1a5cb8;
+  --blue2:    #2470d4;
+  --glow:     #3585f0;
+  --gray1:    #f7f8fa;
+  --gray2:    #eef0f4;
+  --gray3:    #d8dce6;
+  --gray4:    #8e97aa;
+  --gray5:    #4e5872;
+  --green:    #1db87a;
+  --gold:     #f0a500;
+  --red:      #f87171;
+  --f:        'Plus Jakarta Sans', sans-serif;
+  --r:        10px;
+  --rl:       18px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--f);color:var(--navy);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;border:none;background:none;font-family:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+.lbl{font-size:.75rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
+.lbl.lt{color:var(--glow)}
+.h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;line-height:1.18;color:var(--navy)}
+.h2.lt{color:#fff}
+.sub{font-size:1rem;color:var(--gray5);margin-top:12px;max-width:560px}
+.sub.lt{color:rgba(255,255,255,.68)}
+.btn-p{display:inline-flex;align-items:center;gap:8px;font-family:var(--f);font-weight:700;font-size:.95rem;padding:14px 30px;border-radius:var(--r);background:var(--blue);color:#fff;box-shadow:0 4px 18px rgba(26,92,184,.38);transition:all .22s}
+.btn-p:hover{background:var(--blue2);transform:translateY(-2px);box-shadow:0 6px 28px rgba(26,92,184,.5)}
+.btn-o{display:inline-flex;align-items:center;gap:8px;font-family:var(--f);font-weight:700;font-size:.95rem;padding:14px 30px;border-radius:var(--r);background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5);transition:all .22s}
+.btn-o:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease}
+.reveal.on{opacity:1;transform:none}
+
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:900;padding:16px 0;transition:all .3s}
+#nav.up{background:var(--dark);box-shadow:0 2px 20px rgba(0,0,0,.3);padding:10px 0}
+.nav-row{display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-box{width:36px;height:36px;background:var(--blue);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.logo-box svg{width:20px;height:20px;fill:#fff}
+.logo-name{font-weight:800;font-size:1rem;color:#fff;line-height:1.2}
+.logo-name small{display:block;font-weight:400;font-size:.68rem;color:rgba(255,255,255,.55);letter-spacing:.06em}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{font-size:.87rem;font-weight:500;color:rgba(255,255,255,.8);transition:color .2s}
+.nav-links a:hover{color:#fff}
+.nav-book{font-weight:700;font-size:.87rem;padding:9px 20px;background:var(--blue);color:#fff;border-radius:8px;transition:background .2s}
+.nav-book:hover{background:var(--blue2)}
+.nav-right{display:flex;align-items:center;gap:16px}
+.nav-ph{font-size:.85rem;font-weight:600;color:rgba(255,255,255,.8);display:flex;align-items:center;gap:5px}
+.nav-ph svg{width:13px;height:13px;fill:var(--glow)}
+.hbg{display:none;flex-direction:column;gap:5px;padding:4px}
+.hbg span{display:block;width:22px;height:2px;background:#fff;border-radius:2px}
+
+/* MOBILE MENU */
+.mob{display:none;position:fixed;inset:0;background:var(--dark);z-index:950;flex-direction:column;align-items:center;justify-content:center;gap:26px}
+.mob.open{display:flex}
+.mob a{font-size:1.4rem;font-weight:700;color:#fff;opacity:.85}
+.mob-x{position:absolute;top:20px;right:22px;color:#fff;font-size:1.8rem;opacity:.7;cursor:pointer}
+
+/* HERO */
+#hero{min-height:100vh;background:var(--dark);display:flex;align-items:center;padding-top:80px;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 68% 50%,rgba(26,92,184,.18) 0%,transparent 70%),radial-gradient(ellipse 40% 40% at 18% 78%,rgba(26,92,184,.1) 0%,transparent 70%)}
+.hero-dots{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:58px 58px}
+.hero-in{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:2;padding:70px 0}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(26,92,184,.2);border:1px solid rgba(26,92,184,.4);color:var(--glow);font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:7px 14px;border-radius:100px;margin-bottom:20px}
+.hero-badge::before{content:'';width:7px;height:7px;background:var(--glow);border-radius:50%;box-shadow:0 0 8px var(--glow)}
+.hero-h1{font-size:clamp(2.2rem,4.5vw,3.3rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:16px}
+.hero-h1 em{font-style:normal;color:var(--glow)}
+.hero-s{font-size:1.05rem;color:rgba(255,255,255,.7);margin-bottom:10px;font-weight:300}
+.hero-price{font-size:1.5rem;font-weight:800;color:#fff;margin-bottom:28px}
+.hero-price span{color:var(--glow)}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.hero-trust{display:flex;gap:22px;margin-top:36px;flex-wrap:wrap}
+.ti{display:flex;align-items:center;gap:7px;color:rgba(255,255,255,.62);font-size:.83rem;font-weight:500}
+.ti svg{width:15px;height:15px;fill:var(--green);flex-shrink:0}
+
+/* SLIDER */
+.sl-wrap{position:relative;border-radius:var(--rl);overflow:hidden;box-shadow:0 16px 56px rgba(0,0,0,.35),0 0 0 1px rgba(255,255,255,.08);aspect-ratio:3/2;user-select:none;cursor:ew-resize}
+.sl-before,.sl-after{position:absolute;inset:0;background-size:cover;background-position:center}
+.sl-before{background-image:var(--before-photo)}
+.sl-after{background-image:var(--after-photo);clip-path:inset(0 50% 0 0)}
+.sl-line{position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;transform:translateX(-50%);z-index:5}
+.sl-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:42px;height:42px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(0,0,0,.35)}
+.sl-btn svg{width:18px;height:18px}
+.sl-tags{position:absolute;bottom:14px;left:0;right:0;display:flex;justify-content:space-between;padding:0 18px;z-index:6;pointer-events:none}
+.sl-tag{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:100px}
+.sl-tag.b{background:rgba(80,40,0,.78);color:#ffd080}
+.sl-tag.a{background:rgba(26,92,184,.88);color:#fff}
+
+/* STATS */
+#stats{background:var(--navy);padding:26px 0}
+.stats-row{display:flex;justify-content:space-around;align-items:center;flex-wrap:wrap;gap:18px}
+.st{text-align:center}
+.st-n{font-size:2rem;font-weight:800;color:#fff;line-height:1}
+.st-n span{color:var(--glow)}
+.st-d{font-size:.78rem;color:rgba(255,255,255,.5);margin-top:4px;letter-spacing:.04em;text-transform:uppercase;font-weight:500}
+.st-div{width:1px;height:42px;background:rgba(255,255,255,.12)}
+
+/* SERVICES */
+#services{padding:96px 0;background:var(--gray1)}
+.sec-hd{text-align:center;margin-bottom:56px}
+.sec-hd .sub{margin:10px auto 0}
+.svc{background:#fff;border-radius:var(--rl);padding:48px 44px;box-shadow:0 6px 28px rgba(11,31,58,.14);border:1px solid var(--gray2);max-width:860px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.svc-price-row{display:flex;align-items:baseline;gap:6px;margin:16px 0 22px}
+.svc-price{font-size:3.2rem;font-weight:800;color:var(--navy);line-height:1}
+.svc-pnote{font-size:.92rem;color:var(--gray5)}
+.svc-title{font-size:1.5rem;font-weight:800;color:var(--navy);margin-bottom:8px}
+.svc-desc{font-size:.92rem;color:var(--gray5);line-height:1.72;margin-bottom:26px}
+.steps{list-style:none;display:flex;flex-direction:column;gap:13px}
+.step{display:flex;align-items:flex-start;gap:13px;font-size:.9rem;color:var(--gray5)}
+.sn{flex-shrink:0;width:25px;height:25px;background:var(--blue);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.68rem;font-weight:700;margin-top:2px}
+.st2 strong{display:block;color:var(--navy);font-weight:600;margin-bottom:1px}
+.inc-t{font-weight:700;font-size:.87rem;color:var(--navy);margin-bottom:14px;text-transform:uppercase;letter-spacing:.08em}
+.inc-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:26px}
+.inc-li{display:flex;align-items:center;gap:10px;font-size:.9rem;color:var(--gray5)}
+.ck{width:20px;height:20px;background:rgba(29,184,122,.12);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ck svg{width:11px;height:11px;fill:var(--green)}
+.gbox{background:var(--gray1);border:1px solid var(--gray3);border-radius:var(--r);padding:16px 18px;display:flex;gap:12px;align-items:flex-start}
+.gbox-ic{font-size:1.3rem;flex-shrink:0;margin-top:2px}
+.gbox-tx strong{display:block;font-weight:700;font-size:.88rem;color:var(--navy);margin-bottom:3px}
+.gbox-tx span{font-size:.8rem;color:var(--gray5)}
+
+/* WHY RESTORE */
+#why-restore{padding:96px 0;background:var(--dark);position:relative;overflow:hidden}
+#why-restore::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(26,92,184,.14) 0%,transparent 70%);pointer-events:none}
+.wr-in{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.wr-cards{display:flex;flex-direction:column;gap:14px;margin-top:32px}
+.wr-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:var(--rl);padding:22px 24px;display:flex;gap:16px;align-items:flex-start;transition:border-color .2s,background .2s}
+.wr-card:hover{border-color:rgba(26,92,184,.5);background:rgba(26,92,184,.07)}
+.wr-ic{font-size:1.7rem;flex-shrink:0;line-height:1;margin-top:2px}
+.wr-ct{font-weight:700;font-size:.97rem;color:#fff;margin-bottom:5px}
+.wr-cd{font-size:.86rem;color:rgba(255,255,255,.62);line-height:1.65}
+.wr-cd strong{color:rgba(255,255,255,.9)}
+.wr-table{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:var(--rl);overflow:hidden;margin-top:10px}
+.wr-thead{display:grid;grid-template-columns:1fr 1fr 1fr;background:rgba(255,255,255,.07)}
+.wr-thead div{padding:11px 14px;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.45)}
+.wr-thead div:not(:first-child){text-align:center;border-left:1px solid rgba(255,255,255,.07)}
+.wr-thead .g{color:var(--green)}
+.wr-thead .r{color:var(--red)}
+.wr-row{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid rgba(255,255,255,.06)}
+.wr-row:hover{background:rgba(255,255,255,.02)}
+.wr-row div{padding:12px 14px;font-size:.83rem;color:rgba(255,255,255,.72)}
+.wr-row div:not(:first-child){text-align:center;border-left:1px solid rgba(255,255,255,.06)}
+.wr-row div.ft{font-weight:600;color:rgba(255,255,255,.9)}
+.yes{color:var(--green);font-weight:700}
+.no{color:var(--red);font-weight:700}
+.wr-note{margin-top:16px;background:rgba(240,165,0,.1);border:1px solid rgba(240,165,0,.22);border-radius:var(--r);padding:14px 18px;font-size:.84rem;color:rgba(255,255,255,.68);line-height:1.65}
+.wr-note strong{color:var(--gold)}
+
+/* WHY CHOOSE US */
+#why-us{padding:96px 0;background:var(--gray1)}
+.wu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
+.wu-card{background:#fff;border-radius:var(--rl);padding:30px 26px;box-shadow:0 2px 8px rgba(11,31,58,.09);border:1px solid var(--gray2);transition:box-shadow .25s,transform .25s,border-color .25s}
+.wu-card:hover{box-shadow:0 8px 30px rgba(11,31,58,.14);transform:translateY(-4px);border-color:rgba(26,92,184,.2)}
+.wu-ic{width:50px;height:50px;background:rgba(26,92,184,.1);border-radius:13px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.wu-ic svg{width:24px;height:24px;fill:var(--blue)}
+.wu-t{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:7px}
+.wu-d{font-size:.86rem;color:var(--gray5);line-height:1.68}
+
+/* GALLERY */
+#gallery{padding:96px 0;background:#fff}
+.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.gal-card{border-radius:var(--rl);overflow:hidden;box-shadow:0 2px 8px rgba(11,31,58,.09);border:1px solid var(--gray2)}
+.gal-pair{display:grid;grid-template-columns:1fr 1fr}
+.gal-img{aspect-ratio:1;display:flex;align-items:center;justify-content:center;position:relative}
+.gal-img.du{background:#8b6520}
+.gal-img.cl{background:#b0c8e8}
+.gal-svg{width:80%;height:80%}
+.gal-badge{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);white-space:nowrap;background:rgba(0,0,0,.45);color:#fff;padding:3px 10px;border-radius:100px;font-size:.63rem;letter-spacing:.12em;font-weight:700;text-transform:uppercase}
+.gal-img.cl .gal-badge{background:rgba(20,60,120,.55)}
+.gal-cap{padding:11px 15px;background:var(--gray1);font-size:.78rem;color:var(--gray5);font-weight:500;text-align:center}
+
+/* TESTIMONIALS */
+#testimonials{padding:96px 0;background:var(--dark);position:relative;overflow:hidden}
+#testimonials::before{content:'"';position:absolute;top:-20px;left:30px;font-size:20rem;font-weight:800;color:rgba(255,255,255,.03);line-height:1;pointer-events:none}
+.t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.t-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:var(--rl);padding:28px 24px;transition:border-color .2s}
+.t-card:hover{border-color:rgba(26,92,184,.4)}
+.t-stars{display:flex;gap:3px;margin-bottom:16px}
+.t-stars span{color:var(--gold);font-size:.95rem}
+.t-txt{font-size:.92rem;color:rgba(255,255,255,.78);line-height:1.72;margin-bottom:22px;font-weight:300;font-style:italic}
+.t-auth{display:flex;align-items:center;gap:11px}
+.t-av{width:40px;height:40px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.87rem;color:#fff;flex-shrink:0}
+.t-name{font-weight:700;font-size:.9rem;color:#fff;margin-bottom:2px}
+.t-veh{font-size:.76rem;color:rgba(255,255,255,.42)}
+
+/* AREA */
+#area{padding:96px 0;background:var(--gray1)}
+.area-in{display:grid;grid-template-columns:1fr 1fr;gap:68px;align-items:start}
+.city-list{column-count:2;column-gap:18px;list-style:none;margin-top:26px}
+.city-li{display:flex;align-items:center;gap:8px;font-size:.88rem;color:var(--gray5);padding:5px 0;break-inside:avoid}
+.city-li::before{content:'';width:6px;height:6px;background:var(--blue);border-radius:50%;flex-shrink:0}
+.area-map{background:var(--navy);border-radius:var(--rl);aspect-ratio:1;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.area-map-bg{position:absolute;inset:0;opacity:.14}
+.area-map-bg svg{width:100%;height:100%}
+.area-map-cnt{position:relative;text-align:center;z-index:2}
+.area-map-ic{font-size:3.2rem;margin-bottom:8px}
+.area-map-t{font-weight:800;font-size:1.15rem;color:#fff}
+.area-map-cnt p{color:rgba(255,255,255,.48);font-size:.83rem;margin-top:6px}
+.area-note{margin-top:26px;padding:16px 18px;background:rgba(26,92,184,.08);border-left:3px solid var(--blue);border-radius:0 var(--r) var(--r) 0;font-size:.88rem;color:var(--gray5)}
+.area-note strong{color:var(--navy)}
+
+/* BOOKING */
+#booking{padding:96px 0;background:#fff}
+.book-in{display:grid;grid-template-columns:1fr 1.6fr;gap:60px;align-items:start}
+.book-left{position:sticky;top:96px}
+.book-left .sub{margin-top:10px;margin-bottom:26px}
+.bd{display:flex;align-items:flex-start;gap:13px;padding:14px 0;border-bottom:1px solid var(--gray2)}
+.bd:last-of-type{border-bottom:none}
+.bd-ic{width:38px;height:38px;background:rgba(26,92,184,.1);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.bd-ic svg{width:17px;height:17px;fill:var(--blue)}
+.bd-t{font-weight:700;font-size:.88rem;color:var(--navy);margin-bottom:2px}
+.bd-d{font-size:.82rem;color:var(--gray5)}
+.form-box{background:#fff;border:1px solid var(--gray3);border-radius:var(--rl);padding:36px 32px;box-shadow:0 6px 28px rgba(11,31,58,.14)}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ff{grid-column:1/-1}
+.fg-g{display:flex;flex-direction:column;gap:6px}
+.fl{font-size:.8rem;font-weight:700;color:var(--navy);letter-spacing:.04em;text-transform:uppercase}
+.fl .req{color:var(--blue)}
+.fl .opt{color:var(--gray4);font-weight:400;text-transform:none;letter-spacing:0;font-size:.76rem;margin-left:4px}
+.fi,.fs,.fta{font-family:var(--f);font-size:.93rem;color:var(--navy);background:var(--gray1);border:1.5px solid var(--gray3);border-radius:var(--r);padding:11px 13px;transition:border-color .2s,box-shadow .2s;outline:none;width:100%}
+.fi:focus,.fs:focus,.fta:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(26,92,184,.11);background:#fff}
+.fi:disabled,.fs:disabled{opacity:.38;cursor:not-allowed}
+.fs{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%234e5872'%3E%3Cpath d='M7 7l3 3 3-3'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 11px center;background-size:19px;padding-right:34px;background-color:var(--gray1)}
+.fs:focus{background-color:#fff}
+.fta{resize:vertical;min-height:88px}
+.rg{display:flex;gap:11px}
+.ro{flex:1}
+.ro input{display:none}
+.rl2{display:flex;align-items:center;justify-content:center;gap:7px;padding:10px 14px;border:1.5px solid var(--gray3);border-radius:var(--r);font-size:.88rem;font-weight:500;color:var(--gray5);cursor:pointer;transition:all .18s;background:var(--gray1);text-align:center}
+.rl2:hover{border-color:var(--blue);color:var(--blue)}
+.ro input:checked+.rl2{border-color:var(--blue);background:rgba(26,92,184,.08);color:var(--blue);font-weight:600}
+.dmg-box{background:#eef3ff;border:1.5px solid var(--blue);border-radius:var(--r);padding:14px 16px;display:none;margin-top:4px}
+.dmg-box label{display:block;font-size:.8rem;font-weight:700;color:var(--blue);letter-spacing:.04em;text-transform:uppercase;margin-bottom:7px}
+.dmg-box textarea{font-family:var(--f);font-size:.92rem;color:var(--navy);background:#fff;border:1.5px solid rgba(26,92,184,.28);border-radius:var(--r);padding:11px 13px;width:100%;min-height:95px;resize:vertical;outline:none;transition:border-color .2s}
+.dmg-box textarea:focus{border-color:var(--blue)}
+.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:4px}
+.slot{padding:9px 5px;border:1.5px solid var(--gray3);border-radius:var(--r);font-size:.8rem;font-weight:600;color:var(--gray5);cursor:pointer;transition:all .18s;text-align:center;background:var(--gray1)}
+.slot:hover{border-color:var(--blue);color:var(--blue)}
+.slot.on{border-color:var(--blue);background:var(--blue);color:#fff}
+.no-slot{font-size:.83rem;color:var(--gray4);text-align:center;padding:13px;font-style:italic}
+.f-sub{width:100%;padding:15px;background:var(--blue);color:#fff;font-family:var(--f);font-weight:700;font-size:1rem;border-radius:var(--r);cursor:pointer;border:none;transition:all .22s;box-shadow:0 4px 18px rgba(26,92,184,.3);margin-top:8px;display:flex;align-items:center;justify-content:center;gap:8px}
+.f-sub:hover{background:var(--blue2);transform:translateY(-1px)}
+.f-sub:disabled{opacity:.65;cursor:not-allowed;transform:none}
+.f-note{font-size:.76rem;color:var(--gray4);text-align:center;margin-top:11px}
+.sms-bar{background:#fff8e1;border:1px solid #f0c040;border-radius:var(--r);padding:13px 15px;font-size:.78rem;color:#7a5c00;margin-bottom:18px;line-height:1.6}
+.sms-bar strong{color:#5a4000}
+.f-ok{display:none;text-align:center;padding:38px 18px}
+.f-ok-ic{width:68px;height:68px;background:rgba(29,184,122,.12);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
+.f-ok-ic svg{width:34px;height:34px;fill:var(--green)}
+.f-ok h3{font-size:1.45rem;font-weight:800;color:var(--navy);margin-bottom:9px}
+.f-ok p{font-size:.92rem;color:var(--gray5)}
+
+/* FOOTER */
+footer{background:var(--dark);padding:48px 0 28px}
+.foot-in{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:44px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.08)}
+.foot-tag{font-size:.86rem;color:rgba(255,255,255,.48);line-height:1.65;max-width:280px;margin-top:12px}
+.foot-ph{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-weight:700;font-size:1.15rem;color:#fff;transition:color .2s}
+.foot-ph:hover{color:var(--glow)}
+.foot-ph svg{width:17px;height:17px;fill:var(--glow)}
+.foot-ht{font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.38);margin-bottom:14px}
+.foot-links{list-style:none;display:flex;flex-direction:column;gap:8px}
+.foot-links a{font-size:.86rem;color:rgba(255,255,255,.62);transition:color .2s}
+.foot-links a:hover{color:#fff}
+.foot-btm{padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.foot-cp{font-size:.78rem;color:rgba(255,255,255,.28)}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+.fu{opacity:0;animation:fadeUp .7s ease forwards}
+.d1{animation-delay:.1s}.d2{animation-delay:.22s}.d3{animation-delay:.34s}.d4{animation-delay:.46s}
+
+@media(max-width:960px){
+  .hero-in{grid-template-columns:1fr;gap:36px;padding:50px 0}
+  .sl-wrap{max-width:460px;margin:0 auto}
+  .svc{grid-template-columns:1fr;gap:32px;padding:36px 26px}
+  .wr-in{grid-template-columns:1fr;gap:44px}
+  .wu-grid{grid-template-columns:1fr 1fr}
+  .gal-grid{grid-template-columns:1fr 1fr}
+  .t-grid{grid-template-columns:1fr;gap:16px}
+  .area-in{grid-template-columns:1fr}
+  .area-map{display:none}
+  .book-in{grid-template-columns:1fr}
+  .book-left{position:static}
+  .foot-in{grid-template-columns:1fr 1fr}
+  .st-div{display:none}
+}
+@media(max-width:620px){
+  .nav-links,.nav-ph{display:none}
+  .hbg{display:flex}
+  .wu-grid{grid-template-columns:1fr}
+  .gal-grid{grid-template-columns:1fr}
+  .fg{grid-template-columns:1fr}
+  .slots{grid-template-columns:repeat(2,1fr)}
+  .foot-in{grid-template-columns:1fr;gap:28px}
+  .form-box{padding:24px 18px}
+  .hero-btns{flex-direction:column;align-items:flex-start}
+  .rg{flex-direction:column}
+  .wr-thead div,.wr-row div{padding:9px 9px;font-size:.76rem}
+}
+</style>
+</head>
+<body>
+
+<div class="mob" id="mob">
+  <button class="mob-x" id="mobX">&#x2715;</button>
+  <a href="#services" onclick="cm()">Services</a>
+  <a href="#why-restore" onclick="cm()">Why Restore</a>
+  <a href="#why-us" onclick="cm()">Why Us</a>
+  <a href="#gallery" onclick="cm()">Gallery</a>
+  <a href="#testimonials" onclick="cm()">Reviews</a>
+  <a href="#area" onclick="cm()">Service Area</a>
+  <a href="#booking" onclick="cm()" class="btn-p" style="margin-top:8px">Book Now</a>
+</div>
+
+<nav id="nav">
+  <div class="wrap">
+    <div class="nav-row">
+      <a href="#hero" class="logo">
+        <div class="logo-box"><svg viewBox="0 0 24 24"><path d="M12 3C7 3 3 7.5 3 12c0 5 4 9 9 9s9-4 9-9c0-4.5-4-9-9-9zm0 2c1.2 0 2.3.3 3.3.8L5.8 15.3C4.7 13.8 4 12 4 10.5 4 6.9 7.6 5 12 5zm0 14c-1.2 0-2.3-.3-3.3-.8l9.5-9.5C19.3 10.2 20 12 20 13.5c0 3.6-3.6 5.5-8 5.5z"/></svg></div>
+        <div class="logo-name">Pacific Coast Headlights<small>Mobile Restoration &middot; Orange County</small></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why-restore">Why Restore</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#area">Service Area</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="tel:+17145550000" class="nav-ph"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>(714) 555-0000</a>
+        <a href="#booking" class="nav-book">Book Now</a>
+        <button class="hbg" id="hbg"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-dots"></div>
+  <div class="wrap">
+    <div class="hero-in">
+      <div>
+        <div class="hero-badge fu d1">&#127885; Orange County's Mobile Headlight Pros</div>
+        <h1 class="hero-h1 fu d2"><em>Crystal Clear</em><br>Headlights at<br>Your Doorstep</h1>
+        <p class="hero-s fu d3">Professional restoration. We come to your home or office.<br>No shop required. Fast, affordable, guaranteed.</p>
+        <div class="hero-price fu d3"><span>$149</span> for both headlights</div>
+        <div class="hero-btns fu d4">
+          <a href="#booking" class="btn-p"><svg style="width:15px;height:15px;fill:white" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM5 8V6h14v2H5z"/></svg>Book Your Appointment</a>
+          <a href="tel:+17145550000" class="btn-o"><svg style="width:15px;height:15px;fill:white" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>Call Us</a>
+        </div>
+        <div class="hero-trust fu d4">
+          <div class="ti"><svg viewBox="0 0 20 20"><path d="M16.7 8.5L9.5 15.8 5 11.3l1.4-1.4 3.1 3.1 5.8-5.8 1.4 1.3z"/></svg>Licensed &amp; Insured</div>
+          <div class="ti"><svg viewBox="0 0 20 20"><path d="M16.7 8.5L9.5 15.8 5 11.3l1.4-1.4 3.1 3.1 5.8-5.8 1.4 1.3z"/></svg>Satisfaction Guaranteed</div>
+          <div class="ti"><svg viewBox="0 0 20 20"><path d="M16.7 8.5L9.5 15.8 5 11.3l1.4-1.4 3.1 3.1 5.8-5.8 1.4 1.3z"/></svg>UV Ceramic Sealant</div>
+        </div>
+      </div>
+      <div class="fu d3">
+        <div class="sl-wrap" id="sl">
+          <div class="sl-before"></div>
+          <div class="sl-after" id="slA"></div>
+          <div class="sl-line" id="slL">
+            <div class="sl-btn"><svg viewBox="0 0 24 24" fill="none" stroke="#0b1f3a" stroke-width="2.2" stroke-linecap="round"><path d="M8 5l-4 7 4 7M16 5l4 7-4 7"/></svg></div>
+          </div>
+          <div class="sl-tags"><span class="sl-tag b">Before</span><span class="sl-tag a">After</span></div>
+        </div>
+        <p style="text-align:center;color:rgba(255,255,255,.38);font-size:.73rem;margin-top:9px;letter-spacing:.06em">&#8592; Drag to compare &#8594;</p>
+        <p style="text-align:center;color:rgba(255,255,255,.22);font-size:.66rem;margin-top:4px">To swap in real photos: edit <code style="background:rgba(255,255,255,.1);padding:1px 5px;border-radius:3px">--before-photo</code> and <code style="background:rgba(255,255,255,.1);padding:1px 5px;border-radius:3px">--after-photo</code> at top of CSS</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="stats">
+  <div class="wrap">
+    <div class="stats-row">
+      <div class="st reveal"><div class="st-n">500<span>+</span></div><div class="st-d">Vehicles Restored</div></div>
+      <div class="st-div"></div>
+      <div class="st reveal"><div class="st-n">5<span>&#9733;</span></div><div class="st-d">Average Rating</div></div>
+      <div class="st-div"></div>
+      <div class="st reveal"><div class="st-n"><span>$</span>149</div><div class="st-d">Flat Rate &middot; Both Headlights</div></div>
+      <div class="st-div"></div>
+      <div class="st reveal"><div class="st-n">2<span>yr</span></div><div class="st-d">UV Coating Warranty</div></div>
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-hd reveal">
+      <div class="lbl">What We Do</div>
+      <h2 class="h2">One Service. Done Right.</h2>
+      <p class="sub">We specialize in one thing &mdash; and we do it better than anyone in Orange County.</p>
+    </div>
+    <div class="svc reveal">
+      <div>
+        <div class="lbl">Professional Restoration</div>
+        <h3 class="svc-title">Headlight Restoration</h3>
+        <div class="svc-price-row"><span class="svc-price">$149</span><span class="svc-pnote">for both headlights &middot; We come to you</span></div>
+        <p class="svc-desc">Years of UV exposure and road debris leave headlights cloudy, yellow, and dangerous. Our professional multi-step process restores them to like-new clarity &mdash; improving visibility and your vehicle's appearance in under 90 minutes.</p>
+        <ol class="steps">
+          <li class="step"><span class="sn">1</span><div class="st2"><strong>Assessment &amp; Masking</strong>Protect surrounding paint and trim before we begin.</div></li>
+          <li class="step"><span class="sn">2</span><div class="st2"><strong>Multi-Grit Wet Sanding</strong>Progressive 400&#8594;800&#8594;1500 grit sanding removes the oxidation layer.</div></li>
+          <li class="step"><span class="sn">3</span><div class="st2"><strong>Machine Compound Polish</strong>Professional polisher eliminates all sanding marks, restores optical clarity.</div></li>
+          <li class="step"><span class="sn">4</span><div class="st2"><strong>UV Ceramic Sealant</strong>Long-lasting ceramic coating protects against future yellowing for years.</div></li>
+        </ol>
+        <div style="margin-top:28px"><a href="#booking" class="btn-p">Book Now &mdash; $149 Flat Rate</a></div>
+      </div>
+      <div>
+        <div class="inc-t">What's Included</div>
+        <ul class="inc-list">
+          <li class="inc-li"><div class="ck"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="#1db87a" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg></div>Both headlights &mdash; always</li>
+          <li class="inc-li"><div class="ck"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="#1db87a" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg></div>We come to your home or workplace</li>
+          <li class="inc-li"><div class="ck"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="#1db87a" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg></div>All equipment &amp; materials included</li>
+          <li class="inc-li"><div class="ck"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="#1db87a" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg></div>UV ceramic protective coating</li>
+          <li class="inc-li"><div class="ck"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="#1db87a" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg></div>90-minute on-site service</li>
+          <li class="inc-li"><div class="ck"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="#1db87a" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg></div>2-year UV coating warranty</li>
+          <li class="inc-li"><div class="ck"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="#1db87a" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg></div>100% satisfaction guaranteed</li>
+        </ul>
+        <div class="gbox">
+          <div class="gbox-ic">&#128737;&#65039;</div>
+          <div class="gbox-tx"><strong>100% Satisfaction Guarantee</strong><span>If you're not completely satisfied with the results, we'll make it right &mdash; no questions asked.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why-restore">
+  <div class="wrap">
+    <div class="wr-in">
+      <div>
+        <div class="lbl lt reveal">The Smart Decision</div>
+        <h2 class="h2 lt reveal">Why Restore Instead<br>of Replace?</h2>
+        <p class="sub lt reveal">New OEM headlights run $300&ndash;$1,200+ per side at the dealer. Cheap Amazon replacements yellow faster than your originals and often fail within a year. Here's the truth.</p>
+        <div class="wr-cards">
+          <div class="wr-card reveal">
+            <div class="wr-ic">&#127981;</div>
+            <div>
+              <div class="wr-ct">Keep Your OEM Headlights</div>
+              <div class="wr-cd">Your factory headlights are precision-engineered for your exact vehicle &mdash; perfect beam pattern, factory seal, and exact fitment. OEM polycarbonate is higher grade than any aftermarket replacement. Restoring what you have keeps all of that.</div>
+            </div>
+          </div>
+          <div class="wr-card reveal">
+            <div class="wr-ic">&#9888;&#65039;</div>
+            <div>
+              <div class="wr-ct">Cheap Amazon Replacements Yellow Even Faster</div>
+              <div class="wr-cd">Budget aftermarket headlights use thinner polycarbonate with inferior UV coating. Most start hazing within 12&ndash;18 months in the California sun &mdash; <strong>faster than your originals did.</strong> You'd be right back where you started, just $150&ndash;$400 poorer.</div>
+            </div>
+          </div>
+          <div class="wr-card reveal">
+            <div class="wr-ic">&#128167;</div>
+            <div>
+              <div class="wr-ct">Aftermarket Seals Fail &mdash; Water Gets In</div>
+              <div class="wr-cd">Low-cost housings have poor gasket quality. Moisture intrusion fogs the lens from the inside, destroys the reflector, and shorts your bulbs. Once water's in, the unit is trash. Your original factory-sealed housing has zero risk of this when properly restored.</div>
+            </div>
+          </div>
+          <div class="wr-card reveal">
+            <div class="wr-ic">&#128176;</div>
+            <div>
+              <div class="wr-ct">Save Hundreds &mdash; Same-Day Results</div>
+              <div class="wr-cd">Dealer OEM replacement: <strong>$400&ndash;$1,200+ per side.</strong> Budget Amazon pair: $100&ndash;$300 that fades in a year. Our restoration: <strong>$149 flat, both headlights, we come to you.</strong> Most customers save $500 or more and get results that last 3&ndash;5 years.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="wr-table">
+          <div class="wr-thead">
+            <div>Feature</div>
+            <div class="g">Our Restoration</div>
+            <div class="r">Amazon Replacement</div>
+          </div>
+          <div class="wr-row"><div class="ft">Price</div><div><span class="yes">$149</span> both</div><div><span class="no">$100&ndash;$400+</span></div></div>
+          <div class="wr-row"><div class="ft">Keeps OEM Housing</div><div><span class="yes">&#10004;</span></div><div><span class="no">&#10008;</span></div></div>
+          <div class="wr-row"><div class="ft">Factory Beam Pattern</div><div><span class="yes">&#10004; Preserved</span></div><div><span class="no">Often off</span></div></div>
+          <div class="wr-row"><div class="ft">Factory Seal Intact</div><div><span class="yes">&#10004; Yes</span></div><div><span class="no">Cheap gaskets</span></div></div>
+          <div class="wr-row"><div class="ft">Risk of Water Leaks</div><div><span class="yes">None</span></div><div><span class="no">Very common</span></div></div>
+          <div class="wr-row"><div class="ft">UV Protection</div><div><span class="yes">&#10004; Ceramic coat</span></div><div><span class="no">Thin &amp; weak</span></div></div>
+          <div class="wr-row"><div class="ft">How Long It Lasts</div><div><span class="yes">3&ndash;5+ years</span></div><div><span class="no">12&ndash;18 months</span></div></div>
+          <div class="wr-row"><div class="ft">We Come to You</div><div><span class="yes">&#10004; Always</span></div><div><span class="no">DIY install</span></div></div>
+          <div class="wr-row"><div class="ft">Satisfaction Guarantee</div><div><span class="yes">&#10004; 100%</span></div><div><span class="no">Return hassle</span></div></div>
+        </div>
+        <div class="wr-note"><strong>Bottom line:</strong> Aftermarket replacements cost more in the long run and perform worse. Restoration preserves your factory headlights &mdash; and our ceramic sealant keeps them crystal clear for years, not months.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why-us">
+  <div class="wrap">
+    <div class="sec-hd reveal">
+      <div class="lbl">Why Pacific Coast Headlights</div>
+      <h2 class="h2">Why Choose Us?</h2>
+      <p class="sub">We built this business on one promise: show up, do it right, and leave you genuinely impressed every single time.</p>
+    </div>
+    <div class="wu-grid">
+      <div class="wu-card reveal">
+        <div class="wu-ic"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+        <div class="wu-t">We Come to You &mdash; Always</div>
+        <div class="wu-d">No drop-offs. No waiting rooms. We come to your home, office, or wherever works. You carry on with your day while we handle everything in your driveway or parking lot.</div>
+      </div>
+      <div class="wu-card reveal">
+        <div class="wu-ic"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 4l5 2.18V11c0 3.5-2.33 6.79-5 7.93-2.67-1.14-5-4.43-5-7.93V7.18L12 5z"/></svg></div>
+        <div class="wu-t">Professional-Grade Process</div>
+        <div class="wu-d">We don't use spray kits or shortcuts. Every job uses professional wet sanding, machine compound polishing, and a true UV ceramic sealant &mdash; not a $20 kit from the auto parts store.</div>
+      </div>
+      <div class="wu-card reveal">
+        <div class="wu-ic"><svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg></div>
+        <div class="wu-t">Transparent, Flat Pricing</div>
+        <div class="wu-d">$149 for both headlights. That's it. No surprise fees, no upsells, no "it depends." You know exactly what you're paying before we even show up.</div>
+      </div>
+      <div class="wu-card reveal">
+        <div class="wu-ic"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div>
+        <div class="wu-t">100% Satisfaction Guaranteed</div>
+        <div class="wu-d">If you're not completely happy with the results, we'll make it right &mdash; no arguments, no hassle. We stand behind every job personally. Your satisfaction isn't just a policy.</div>
+      </div>
+      <div class="wu-card reveal">
+        <div class="wu-ic"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div>
+        <div class="wu-t">Locally Owned &amp; Operated</div>
+        <div class="wu-d">We're not a franchise or a chain. We're your neighbor &mdash; a local Orange County business that lives and works in the same communities we serve. Your referral means everything to us.</div>
+      </div>
+      <div class="wu-card reveal">
+        <div class="wu-ic"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg></div>
+        <div class="wu-t">Done in 90 Minutes or Less</div>
+        <div class="wu-d">From setup to sealant cure, most jobs are done in under 90 minutes. We work around your schedule &mdash; weekends all day, weekdays after 3 PM. In and out before you know it.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <div class="sec-hd reveal">
+      <div class="lbl">Our Work</div>
+      <h2 class="h2">Before &amp; After Results</h2>
+      <p class="sub">Real results from real Orange County customers. The difference speaks for itself.</p>
+    </div>
+    <div class="gal-grid">
+      <div class="gal-card reveal">
+        <div class="gal-pair">
+          <div class="gal-img du">
+            <svg class="gal-svg" viewBox="0 0 160 120"><path d="M20 30Q20 18 32 18L128 18Q140 18 140 30L140 92Q140 104 128 104L32 104Q20 104 20 92Z" fill="#a07828" opacity=".85"/><ellipse cx="80" cy="61" rx="46" ry="34" fill="#c8a040" opacity=".55"/><circle cx="66" cy="59" r="21" fill="#e0b84a" opacity=".45"/><line x1="30" y1="36" x2="108" y2="74" stroke="#806010" stroke-width="1.4" opacity=".5"/><line x1="42" y1="86" x2="132" y2="46" stroke="#806010" stroke-width="1" opacity=".4"/></svg>
+            <div class="gal-badge">Before</div>
+          </div>
+          <div class="gal-img cl">
+            <svg class="gal-svg" viewBox="0 0 160 120"><path d="M20 30Q20 18 32 18L128 18Q140 18 140 30L140 92Q140 104 128 104L32 104Q20 104 20 92Z" fill="#c8dcf8" opacity=".9"/><path d="M26 22L128 22Q138 22 138 30L138 40Q80 54 26 38Z" fill="white" opacity=".35"/><circle cx="64" cy="60" r="23" fill="#2050b0" opacity=".75"/><circle cx="64" cy="60" r="15" fill="#4080d8" opacity=".85"/><circle cx="64" cy="60" r="8" fill="white"/><rect x="94" y="47" width="38" height="8" rx="4" fill="white" opacity=".92"/><rect x="94" y="59" width="38" height="5" rx="2.5" fill="white" opacity=".65"/></svg>
+            <div class="gal-badge">After</div>
+          </div>
+        </div>
+        <div class="gal-cap">2019 Toyota Camry &mdash; Irvine, CA</div>
+      </div>
+      <div class="gal-card reveal">
+        <div class="gal-pair">
+          <div class="gal-img du">
+            <svg class="gal-svg" viewBox="0 0 160 120"><path d="M14 34Q10 18 32 17L138 17Q154 19 150 34L150 89Q154 104 130 104L30 104Q10 104 14 89Z" fill="#9a7228" opacity=".85"/><ellipse cx="82" cy="61" rx="52" ry="37" fill="#c09030" opacity=".5"/><circle cx="74" cy="61" r="25" fill="#d8a838" opacity=".45"/><line x1="24" y1="40" x2="92" y2="78" stroke="#7a5808" stroke-width="1.5" opacity=".5"/></svg>
+            <div class="gal-badge">Before</div>
+          </div>
+          <div class="gal-img cl">
+            <svg class="gal-svg" viewBox="0 0 160 120"><path d="M14 34Q10 18 32 17L138 17Q154 19 150 34L150 89Q154 104 130 104L30 104Q10 104 14 89Z" fill="#ccdaf5" opacity=".9"/><path d="M20 21L136 21Q150 21 150 31L150 42Q80 56 20 38Z" fill="white" opacity=".38"/><circle cx="70" cy="61" r="27" fill="#1848a8" opacity=".75"/><circle cx="70" cy="61" r="18" fill="#3878d8" opacity=".85"/><circle cx="70" cy="61" r="10" fill="white"/><rect x="106" y="48" width="36" height="8" rx="4" fill="white" opacity=".9"/><rect x="106" y="60" width="36" height="5" rx="2.5" fill="white" opacity=".65"/></svg>
+            <div class="gal-badge">After</div>
+          </div>
+        </div>
+        <div class="gal-cap">2016 Ford F-150 &mdash; Anaheim, CA</div>
+      </div>
+      <div class="gal-card reveal">
+        <div class="gal-pair">
+          <div class="gal-img du">
+            <svg class="gal-svg" viewBox="0 0 160 120"><path d="M18 32Q22 17 38 16L128 16Q144 17 142 32L142 91Q144 105 128 105L38 105Q22 105 18 91Z" fill="#a07830" opacity=".85"/><ellipse cx="80" cy="62" rx="46" ry="34" fill="#c09030" opacity=".5"/><circle cx="80" cy="62" r="26" fill="#d8a840" opacity=".4"/><line x1="28" y1="38" x2="116" y2="80" stroke="#806010" stroke-width="1.5" opacity=".5"/></svg>
+            <div class="gal-badge">Before</div>
+          </div>
+          <div class="gal-img cl">
+            <svg class="gal-svg" viewBox="0 0 160 120"><path d="M18 32Q22 17 38 16L128 16Q144 17 142 32L142 91Q144 105 128 105L38 105Q22 105 18 91Z" fill="#ccdaf8" opacity=".9"/><path d="M24 20L132 20Q143 20 143 29L143 40Q80 54 24 36Z" fill="white" opacity=".35"/><circle cx="76" cy="62" r="26" fill="#1848a8" opacity=".75"/><circle cx="76" cy="62" r="17" fill="#3878d8" opacity=".85"/><circle cx="76" cy="62" r="10" fill="white"/><rect x="110" y="49" width="26" height="7" rx="3.5" fill="white" opacity=".9"/></svg>
+            <div class="gal-badge">After</div>
+          </div>
+        </div>
+        <div class="gal-cap">2014 Honda Pilot &mdash; Newport Beach, CA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="wrap">
+    <div class="sec-hd reveal" style="text-align:center;margin-bottom:52px">
+      <div class="lbl lt">Customer Reviews</div>
+      <h2 class="h2 lt">What Our Customers Say</h2>
+      <p class="sub lt" style="margin:10px auto 0">Hundreds of satisfied Orange County drivers trust us with their vehicles.</p>
+    </div>
+    <div class="t-grid">
+      <div class="t-card reveal">
+        <div class="t-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+        <p class="t-txt">"Honestly blown away. My headlights looked brand new &mdash; I almost thought he switched them out. Showed up on time, done in under an hour. Worth every penny and then some."</p>
+        <div class="t-auth"><div class="t-av">MR</div><div><div class="t-name">Marcus R.</div><div class="t-veh">2018 Honda Accord &middot; Irvine</div></div></div>
+      </div>
+      <div class="t-card reveal">
+        <div class="t-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+        <p class="t-txt">"Booked Saturday, he was here Sunday morning. My SUV's headlights were so cloudy I was nervous driving at night. Now they're crystal clear. Super professional, great communication."</p>
+        <div class="t-auth"><div class="t-av">JL</div><div><div class="t-name">Jennifer L.</div><div class="t-veh">2015 Toyota Highlander &middot; Huntington Beach</div></div></div>
+      </div>
+      <div class="t-card reveal">
+        <div class="t-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+        <p class="t-txt">"I was quoted $400 at the dealership for new headlights. This was $149 and they look just as good. He came to my office parking lot on my lunch break. Couldn't be easier."</p>
+        <div class="t-auth"><div class="t-av">DC</div><div><div class="t-name">David C.</div><div class="t-veh">2013 Ford Explorer &middot; Anaheim</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="area">
+  <div class="wrap">
+    <div class="area-in">
+      <div>
+        <div class="lbl reveal">Coverage</div>
+        <h2 class="h2 reveal">Serving All of<br>Orange County, CA</h2>
+        <p class="sub reveal">We come to your home, office, or anywhere in between. No need to drive to a shop.</p>
+        <ul class="city-list reveal">
+          <li class="city-li">Anaheim</li><li class="city-li">Irvine</li>
+          <li class="city-li">Santa Ana</li><li class="city-li">Huntington Beach</li>
+          <li class="city-li">Garden Grove</li><li class="city-li">Orange</li>
+          <li class="city-li">Fullerton</li><li class="city-li">Costa Mesa</li>
+          <li class="city-li">Newport Beach</li><li class="city-li">Lake Forest</li>
+          <li class="city-li">Mission Viejo</li><li class="city-li">Westminster</li>
+          <li class="city-li">Yorba Linda</li><li class="city-li">Buena Park</li>
+          <li class="city-li">Laguna Niguel</li><li class="city-li">San Clemente</li>
+          <li class="city-li">Tustin</li><li class="city-li">Aliso Viejo</li>
+          <li class="city-li">Dana Point</li><li class="city-li">Brea</li>
+          <li class="city-li">Placentia</li><li class="city-li">La Habra</li>
+          <li class="city-li">Cypress</li><li class="city-li">Seal Beach</li>
+          <li class="city-li">San Juan Capistrano</li><li class="city-li">Laguna Beach</li>
+        </ul>
+        <div class="area-note reveal"><strong>Not seeing your city?</strong> Give us a call &mdash; we likely serve your area or can make arrangements.</div>
+      </div>
+      <div class="area-map reveal">
+        <div class="area-map-bg"><svg viewBox="0 0 400 400"><circle cx="200" cy="200" r="180" fill="none" stroke="white" stroke-width="1"/><circle cx="200" cy="200" r="130" fill="none" stroke="white" stroke-width="1"/><circle cx="200" cy="200" r="80" fill="none" stroke="white" stroke-width="1"/><line x1="20" y1="200" x2="380" y2="200" stroke="white" stroke-width=".5"/><line x1="200" y1="20" x2="200" y2="380" stroke="white" stroke-width=".5"/></svg></div>
+        <div class="area-map-cnt"><div class="area-map-ic">&#128205;</div><div class="area-map-t">Orange County, CA</div><p>Full county coverage</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="booking">
+  <div class="wrap">
+    <div class="book-in">
+      <div class="book-left">
+        <div class="lbl reveal">Get Started</div>
+        <h2 class="h2 reveal">Book Your<br>Appointment</h2>
+        <p class="sub reveal">Fill out the form and we'll confirm your appointment via text or call within a few hours.</p>
+        <div class="bd reveal"><div class="bd-ic"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div><div><div class="bd-t">We Come to You</div><div class="bd-d">Home, office, parking lot &mdash; wherever works best.</div></div></div>
+        <div class="bd reveal"><div class="bd-ic"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg></div><div><div class="bd-t">~90 Minute Service</div><div class="bd-d">Most restorations are complete in under 90 minutes.</div></div></div>
+        <div class="bd reveal"><div class="bd-ic"><svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg></div><div><div class="bd-t">$149 Flat Rate</div><div class="bd-d">Both headlights. No hidden fees, no surprises.</div></div></div>
+        <div class="bd reveal"><div class="bd-ic"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg></div><div><div class="bd-t">Fast Confirmation</div><div class="bd-d">We'll call or text you within a few hours to confirm.</div></div></div>
+      </div>
+
+      <div class="form-box reveal">
+        <div class="sms-bar" id="smsBar"><strong>&#9881;&#65039; Setup Required:</strong> Paste your <a href="https://zapier.com" target="_blank" style="color:#7a5c00;text-decoration:underline">Zapier</a> webhook URL into <code>WEBHOOK_URL</code> in the script to enable SMS notifications. <a href="#" onclick="this.closest('.sms-bar').style.display='none';return false" style="color:#7a5c00;float:right;text-decoration:underline">Dismiss</a></div>
+        <div id="fFields">
+          <div class="fg">
+            <div class="fg-g ff"><label class="fl" for="fN">Full Name <span class="req">*</span></label><input class="fi" type="text" id="fN" placeholder="John Smith"></div>
+            <div class="fg-g"><label class="fl" for="fP">Phone <span class="req">*</span></label><input class="fi" type="tel" id="fP" placeholder="(714) 555-0000"></div>
+            <div class="fg-g"><label class="fl" for="fE">Email <span class="opt">(optional)</span></label><input class="fi" type="email" id="fE" placeholder="john@email.com"></div>
+            <div class="fg-g"><label class="fl" for="fY">Vehicle Year <span class="req">*</span></label><select class="fs" id="fY" onchange="onYr()"><option value="">Select year</option></select></div>
+            <div class="fg-g"><label class="fl" for="fM">Make <span class="req">*</span></label><select class="fs" id="fM" onchange="onMk()" disabled><option value="">Select make</option></select></div>
+            <div class="fg-g ff"><label class="fl" for="fMo">Model <span class="req">*</span></label><select class="fs" id="fMo" disabled><option value="">Select model</option></select></div>
+            <div class="fg-g ff">
+              <label class="fl">Cracks, chips, or damage? <span class="req">*</span></label>
+              <div class="rg">
+                <div class="ro"><input type="radio" name="dmg" id="dNo" value="No"><label class="rl2" for="dNo"><svg style="width:13px;height:13px;fill:currentColor" viewBox="0 0 20 20"><path d="M16.7 8.5L9.5 15.8 5 11.3l1.4-1.4 3.1 3.1 5.8-5.8 1.4 1.3z"/></svg>No &mdash; just cloudy</label></div>
+                <div class="ro"><input type="radio" name="dmg" id="dYes" value="Yes"><label class="rl2" for="dYes"><svg style="width:13px;height:13px;fill:currentColor" viewBox="0 0 20 20"><path d="M10 3a7 7 0 100 14A7 7 0 0010 3zm0 2a5 5 0 110 10A5 5 0 0110 5zm-.5 2.5v4h1V7.5h-1zm0 5v1.5h1V12.5h-1z"/></svg>Yes &mdash; there is damage</label></div>
+              </div>
+            </div>
+            <div class="ff"><div class="dmg-box" id="dmgB"><label for="fDD">Describe the Damage <span style="color:var(--blue)">*</span> <span style="color:var(--gray4);font-weight:400;text-transform:none;letter-spacing:0;font-size:.76rem">&mdash; helps us prepare</span></label><textarea id="fDD" placeholder="e.g. Small crack on driver's side corner, chip near top edge, deep scratch across lens..."></textarea></div></div>
+            <div class="fg-g"><label class="fl" for="fDt">Preferred Date <span class="req">*</span></label><input class="fi" type="date" id="fDt"></div>
+            <div class="fg-g"><label class="fl">Preferred Time <span class="req">*</span></label><div id="slotWrap"><p class="no-slot">&#8592; Select a date first</p></div><input type="hidden" id="fT"></div>
+            <div class="fg-g ff"><label class="fl" for="fNt">Additional Notes <span class="opt">(optional)</span></label><textarea class="fta" id="fNt" placeholder="Address, gate code, anything helpful..." style="min-height:68px"></textarea></div>
+          </div>
+          <button class="f-sub" id="subBtn" onclick="doSub()"><svg style="width:15px;height:15px;fill:white" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM5 8V6h14v2H5z"/></svg>Request Appointment</button>
+          <p class="f-note">By submitting, you agree to be contacted at the number provided.</p>
+        </div>
+        <div class="f-ok" id="fOk">
+          <div class="f-ok-ic"><svg viewBox="0 0 36 36"><path d="M5 18L14 27 31 9" stroke="#1db87a" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Request Received!</h3>
+          <p>Thanks! We'll text or call you within a few hours to confirm your appointment. Looking forward to restoring your headlights!</p>
+          <p style="margin-top:12px;color:var(--blue);font-weight:700;font-size:1.1rem">(714) 555-0000</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-in">
+      <div>
+        <div class="logo"><div class="logo-box"><svg viewBox="0 0 24 24"><path d="M12 3C7 3 3 7.5 3 12c0 5 4 9 9 9s9-4 9-9c0-4.5-4-9-9-9zm0 2c1.2 0 2.3.3 3.3.8L5.8 15.3C4.7 13.8 4 12 4 10.5 4 6.9 7.6 5 12 5zm0 14c-1.2 0-2.3-.3-3.3-.8l9.5-9.5C19.3 10.2 20 12 20 13.5c0 3.6-3.6 5.5-8 5.5z" fill="white"/></svg></div><div class="logo-name">Pacific Coast Headlights<small>Mobile Restoration &middot; Orange County, CA</small></div></div>
+        <p class="foot-tag">Professional mobile headlight restoration serving all of Orange County. Crystal clear results &mdash; we come to you.</p>
+        <a href="tel:+17145550000" class="foot-ph"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>(714) 555-0000</a>
+      </div>
+      <div>
+        <div class="foot-ht">Navigation</div>
+        <ul class="foot-links">
+          <li><a href="#services">Services &amp; Pricing</a></li>
+          <li><a href="#why-restore">Why Restore vs. Replace</a></li>
+          <li><a href="#why-us">Why Choose Us</a></li>
+          <li><a href="#gallery">Before &amp; After Gallery</a></li>
+          <li><a href="#testimonials">Customer Reviews</a></li>
+          <li><a href="#area">Service Area</a></li>
+          <li><a href="#booking">Book Appointment</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-ht">Hours &amp; Contact</div>
+        <ul class="foot-links">
+          <li><a href="tel:+17145550000">(714) 555-0000</a></li>
+          <li><a href="mailto:info@pacificcoastheadlights.com">info@pacificcoastheadlights.com</a></li>
+          <li style="color:rgba(255,255,255,.45);font-size:.83rem;padding-top:8px">Weekends: All day</li>
+          <li style="color:rgba(255,255,255,.45);font-size:.83rem">Weekdays: After 3:00 PM</li>
+          <li style="color:rgba(255,255,255,.45);font-size:.83rem">All of Orange County, CA</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-btm">
+      <span class="foot-cp">&copy; 2025 Pacific Coast Headlights. All rights reserved.</span>
+      <span class="foot-cp">Orange County, CA &middot; Licensed &amp; Insured</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   YOUR CONFIGURATION
+   ============================================================ */
+var WEBHOOK_URL = 'YOUR_ZAPIER_WEBHOOK_URL_HERE';
+
+var TIME_CONFIG = {
+  weekend: ['8:00 AM','9:00 AM','10:00 AM','11:00 AM','12:00 PM','1:00 PM','2:00 PM','3:00 PM','4:00 PM','5:00 PM'],
+  weekday: ['3:00 PM','3:30 PM','4:00 PM','4:30 PM','5:00 PM','5:30 PM','6:00 PM','6:30 PM','7:00 PM']
+};
+
+var BLOCKED = [];
+
+var MAKES = {
+  'Acura':['ILX','MDX','RDX','TLX','Other'],
+  'Audi':['A3','A4','A6','Q3','Q5','Q7','Q8','Other'],
+  'BMW':['3 Series','4 Series','5 Series','7 Series','M3','M5','X1','X3','X5','X7','Other'],
+  'Buick':['Enclave','Encore','Envision','Other'],
+  'Cadillac':['CT4','CT5','Escalade','XT4','XT5','XT6','Other'],
+  'Chevrolet':['Blazer','Colorado','Corvette','Equinox','Malibu','Silverado 1500','Silverado 2500','Suburban','Tahoe','Traverse','Other'],
+  'Chrysler':['300','Pacifica','Voyager','Other'],
+  'Dodge':['Challenger','Charger','Durango','Other'],
+  'Ford':['Bronco','Edge','Escape','Expedition','Explorer','F-150','F-250','F-350','Mustang','Ranger','Other'],
+  'GMC':['Acadia','Canyon','Sierra 1500','Sierra 2500','Terrain','Yukon','Other'],
+  'Honda':['Accord','CR-V','Civic','HR-V','Odyssey','Passport','Pilot','Ridgeline','Other'],
+  'Hyundai':['Elantra','Ioniq','Kona','Palisade','Santa Fe','Sonata','Tucson','Other'],
+  'Infiniti':['Q50','Q60','QX55','QX60','QX80','Other'],
+  'Jeep':['Cherokee','Compass','Gladiator','Grand Cherokee','Renegade','Wrangler','Other'],
+  'Kia':['Carnival','K5','Niro','Seltos','Sorento','Soul','Sportage','Telluride','Other'],
+  'Lexus':['ES','GX','IS','LX','NX','RX','UX','Other'],
+  'Lincoln':['Aviator','Corsair','Navigator','Nautilus','Other'],
+  'Mazda':['CX-5','CX-9','CX-50','Mazda3','Mazda6','MX-5 Miata','Other'],
+  'Mercedes':['C-Class','E-Class','GLA','GLC','GLE','GLS','S-Class','Sprinter','Other'],
+  'Nissan':['Altima','Armada','Frontier','Maxima','Murano','Pathfinder','Rogue','Sentra','Titan','Other'],
+  'Ram':['1500','2500','3500','ProMaster','Other'],
+  'Subaru':['Ascent','BRZ','Crosstrek','Forester','Impreza','Legacy','Outback','WRX','Other'],
+  'Tesla':['Model 3','Model S','Model X','Model Y','Cybertruck','Other'],
+  'Toyota':['4Runner','Camry','Corolla','Highlander','Land Cruiser','Prius','RAV4','Sequoia','Sienna','Tacoma','Tundra','Venza','Other'],
+  'Volkswagen':['Atlas','Golf','ID.4','Jetta','Passat','Tiguan','Other'],
+  'Volvo':['S60','XC40','XC60','XC90','Other'],
+  'Other':['Other / Not Listed']
+};
+
+/* ============================================================
+   CORE LOGIC
+   ============================================================ */
+
+// Year dropdown
+(function(){
+  var s=document.getElementById('fY'),y=new Date().getFullYear();
+  for(;y>=1995;y--){var o=document.createElement('option');o.value=y;o.textContent=y;s.appendChild(o);}
+})();
+
+function onYr(){
+  var mk=document.getElementById('fM'),mo=document.getElementById('fMo');
+  mk.innerHTML='<option value="">Select make</option>';
+  mo.innerHTML='<option value="">Select model</option>';
+  mo.disabled=true;
+  if(!document.getElementById('fY').value){mk.disabled=true;return;}
+  Object.keys(MAKES).sort().forEach(function(m){var o=document.createElement('option');o.value=m;o.textContent=m;mk.appendChild(o);});
+  mk.disabled=false;
+}
+
+function onMk(){
+  var make=document.getElementById('fM').value,mo=document.getElementById('fMo');
+  mo.innerHTML='<option value="">Select model</option>';
+  if(!make||!MAKES[make]){mo.disabled=true;return;}
+  MAKES[make].forEach(function(m){var o=document.createElement('option');o.value=m;o.textContent=m;mo.appendChild(o);});
+  mo.disabled=false;
+}
+
+// Date picker min
+var di=document.getElementById('fDt');
+var tm=new Date();tm.setDate(tm.getDate()+1);
+di.min=tm.toISOString().split('T')[0];
+
+di.addEventListener('change',function(){
+  var v=this.value,sw=document.getElementById('slotWrap');
+  document.getElementById('fT').value='';
+  if(!v){sw.innerHTML='<p class="no-slot">&#8592; Select a date first</p>';return;}
+  if(BLOCKED.indexOf(v)>-1){sw.innerHTML='<p class="no-slot">Not available on this date. Please choose another.</p>';return;}
+  var d=new Date(v+'T12:00:00'),dow=d.getDay();
+  var slots=(dow===0||dow===6)?TIME_CONFIG.weekend:TIME_CONFIG.weekday;
+  if(!slots||!slots.length){sw.innerHTML='<p class="no-slot">No availability on this day.</p>';return;}
+  var h='<div class="slots">';
+  slots.forEach(function(t){h+='<div class="slot" onclick="pickSlot(this,\''+t+'\')">'+t+'</div>';});
+  h+='</div>';
+  sw.innerHTML=h;
+});
+
+function pickSlot(el,t){
+  document.querySelectorAll('.slot').forEach(function(s){s.classList.remove('on');});
+  el.classList.add('on');
+  document.getElementById('fT').value=t;
+}
+
+// Damage box toggle
+document.querySelectorAll('input[name="dmg"]').forEach(function(r){
+  r.addEventListener('change',function(){
+    document.getElementById('dmgB').style.display=this.value==='Yes'?'block':'none';
+  });
+});
+
+// Nav scroll
+window.addEventListener('scroll',function(){
+  document.getElementById('nav').classList.toggle('up',window.scrollY>40);
+});
+
+// Hamburger
+document.getElementById('hbg').addEventListener('click',function(){document.getElementById('mob').classList.add('open');});
+document.getElementById('mobX').addEventListener('click',function(){document.getElementById('mob').classList.remove('open');});
+function cm(){document.getElementById('mob').classList.remove('open');}
+
+// Scroll reveal
+var ro=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('on');});
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(function(el){ro.observe(el);});
+
+// Before/After slider
+(function(){
+  var s=document.getElementById('sl'),a=document.getElementById('slA'),l=document.getElementById('slL');
+  var drag=false,anim=true,dir=-1,pos=50;
+  function sp(p){p=Math.max(5,Math.min(95,p));a.style.clipPath='inset(0 '+(100-p)+'% 0 0)';l.style.left=p+'%';}
+  sp(50);
+  function gx(e){return e.touches?e.touches[0].clientX:e.clientX;}
+  l.addEventListener('mousedown',function(){drag=true;anim=false;});
+  l.addEventListener('touchstart',function(){drag=true;anim=false;},{passive:true});
+  s.addEventListener('mousemove',function(e){if(!drag)return;var r=s.getBoundingClientRect();sp(((gx(e)-r.left)/r.width)*100);});
+  s.addEventListener('touchmove',function(e){if(!drag)return;var r=s.getBoundingClientRect();sp(((gx(e)-r.left)/r.width)*100);},{passive:true});
+  document.addEventListener('mouseup',function(){drag=false;});
+  document.addEventListener('touchend',function(){drag=false;});
+  function auto(){if(!anim)return;pos+=dir*0.4;if(pos<=25||pos>=75)dir*=-1;sp(pos);requestAnimationFrame(auto);}
+  auto();
+})();
+
+// Form submit
+async function doSub(){
+  var name=document.getElementById('fN').value.trim();
+  var phone=document.getElementById('fP').value.trim();
+  var email=document.getElementById('fE').value.trim();
+  var yr=document.getElementById('fY').value;
+  var make=document.getElementById('fM').value;
+  var model=document.getElementById('fMo').value;
+  var dmg=document.querySelector('input[name="dmg"]:checked');
+  var date=document.getElementById('fDt').value;
+  var time=document.getElementById('fT').value;
+  var notes=document.getElementById('fNt').value.trim();
+  var dmgDesc=document.getElementById('fDD').value.trim();
+
+  if(!name){alert('Please enter your full name.');return;}
+  if(!phone){alert('Please enter your phone number.');return;}
+  if(!yr){alert('Please select your vehicle year.');return;}
+  if(!make){alert('Please select your vehicle make.');return;}
+  if(!model){alert('Please select your vehicle model.');return;}
+  if(!dmg){alert('Please answer the headlight damage question.');return;}
+  if(dmg.value==='Yes'&&!dmgDesc){alert('Please describe the damage to your headlights.');return;}
+  if(!date){alert('Please select a preferred date.');return;}
+  if(!time){alert('Please select a preferred time slot.');return;}
+
+  var vehicle=yr+' '+make+' '+model;
+  var btn=document.getElementById('subBtn');
+  btn.disabled=true;
+  btn.innerHTML='<svg style="width:15px;height:15px;fill:white;animation:spin 1s linear infinite" viewBox="0 0 24 24"><path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 14.03 20 13.07 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"/></svg> Sending...';
+
+  var payload={name:name,phone:phone,email:email||'Not provided',vehicle:vehicle,year:yr,make:make,model:model,damage:dmg.value,damageDescription:dmg.value==='Yes'?dmgDesc:'N/A',date:date,time:time,notes:notes||'None',submittedAt:new Date().toLocaleString('en-US',{timeZone:'America/Los_Angeles'})};
+  var sms='NEW BOOKING - Pacific Coast Headlights\n\nName: '+name+'\nPhone: '+phone+'\nEmail: '+(email||'Not provided')+'\nVehicle: '+vehicle+'\nDamage: '+dmg.value+(dmg.value==='Yes'?' - '+dmgDesc:'')+'\nDate: '+date+'\nTime: '+time+'\nNotes: '+(notes||'None');
+
+  if(WEBHOOK_URL&&WEBHOOK_URL!=='YOUR_ZAPIER_WEBHOOK_URL_HERE'){
+    try{await fetch(WEBHOOK_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(Object.assign({},payload,{sms:sms}))});}
+    catch(e){console.warn('Webhook error:',e);}
+  } else {
+    console.log('Booking data:',payload);
+    console.log('SMS preview:\n'+sms);
+  }
+
+  document.getElementById('fFields').style.display='none';
+  document.getElementById('fOk').style.display='block';
+}
+</script>
+</body>
+</html>
